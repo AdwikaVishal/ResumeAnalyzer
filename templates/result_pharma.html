@@ -1,0 +1,48 @@
+<title>Resume Analysis Result - Pharma</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <h1 class="my-5 text-center">Resume Analysis - Pharma</h1>
+    <div class="card p-4">
+        <p><strong>Filename:</strong> {{ filename }}</p>
+        <p><strong>Resume Score:</strong> <span class="badge badge-primary">{{ analysis['score'] }} / 100</span></p>
+        
+        {% if analysis.get('skills') %}
+        <p><strong>Skills Found:</strong></p>
+        {% for skill in analysis['skills'] %}
+        <span class="badge badge-success">{{ skill }}</span>
+        {% endfor %}
+        {% else %}
+        <p><strong class="text-muted">No relevant skills detected.</strong></p>
+        {% endif %}
+        
+        {% if analysis.get('experience') %}
+        <p><strong>Experience:</strong></p>
+        {% for exp in analysis['experience'] %}
+        <p>{{ exp }}</p>
+        {% endfor %}
+        {% endif %}
+        
+        {% if analysis.get('education') %}
+        <p><strong>Education:</strong></p>
+        {% for edu in analysis['education'] %}
+        <p>{{ edu }}</p>
+        {% endfor %}
+        {% endif %}
+    </div>
+
+    <a href="{{ url_for('download_file', filename=filename) }}" class="btn btn-info btn-block mt-3" target="_blank">
+        <i class="fas fa-file-alt"></i> Download Full Analysis
+    </a>
+
+    <div class="card mt-4 p-4">
+        <h4>Sentiment Analysis</h4>
+        <p><strong>Tone of Resume:</strong> <span class="badge badge-info">{{ analysis['sentiment'] }}</span></p>
+    </div>
+
+    <a href="/" class="btn btn-secondary btn-block mt-3">Upload Another Resume</a>
+</div>
+</body>
+</html>
