@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+body {
+    background: #b4f4de;
+    color: #333;
+    text-align: center;
+}
+
+
+.navbar {
+    background: #1a1a2e;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar a {
+    color: white;
+    font-size: 18px;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+    color: #00aaff;
+}
+
+.container {
+    max-width: 900px;
+    margin: 60px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+h1 {
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+
+form {
+    margin-top: 20px;
+    text-align: center;
+}
+
+input[type="file"] {
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px dashed #00aaff;
+    border-radius: 8px;
+    width: 100%;
+    cursor: pointer;
+    background: #f9f9f9;
+}
+
+button {
+    background: #00aaff;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background: #0077cc;
+}
+
+/* Card Styling */
+.card {
+    background: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+/* Resume Score */
+.resume-score {
+    font-size: 20px;
+    font-weight: 600;
+    color: #0077cc;
+    padding: 10px;
+    background: #e8f4ff;
+    border-radius: 8px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+/* Skills Tags */
+.skill-tag {
+    display: inline-block;
+    background: #00aaff;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 12px;
+    margin: 5px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Experience & Education Lists */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background: #f9f9f9;
+    margin: 6px 0;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+/* Sentiment Analysis Badge */
+.sentiment {
+    font-size: 18px;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 6px;
+    display: inline-block;
+}
+
+.sentiment.positive {
+    background: #28a745;
+    color: white;
+}
+
+.sentiment.negative {
+    background: #dc3545;
+    color: white;
+}
+
+.sentiment.neutral {
+    background: #ffc107;
+    color: white;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background: #007bff;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
+
+/* Category Image Section */
+.category {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.category img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.category img:hover {
+    transform: scale(1.1);
+}
+
+.category div {
+    text-align: center;
+}
+
+.category div p {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .navbar a {
+        font-size: 16px;
+        margin: 0 10px;
+    }
+
+    .category {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .category img {
+        width: 100px;
+        height: 100px;
+    }
+}
