@@ -1,1 +1,1 @@
-# ResumeAnalyzer
+The aim of the Resume Analyzer project is to analyze and evaluate resumes across various sectors, including Tech, Pharma, Healthcare, Education, and Banking, to provide tailored feedback for improving job application success. It leverages technologies such as Flask for backend development, Python for data processing and analysis, and HTML/CSS for creating a user-friendly front-end interface, enabling seamless interactions and efficient resume evaluation.
